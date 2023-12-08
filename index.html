@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Inventario: RetroGames.bit</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+        <button class="btnMode" id="btnMode">
+            <!-- modo oscuro -->
+            &#128123;
+          </button>
+      <div class="arriba">
+        <div class="enunciado">
+          <h1>Gestión de Inventario</h1>
+        </div>
+      </div>
+      <div class="contenedor">
+        <div class="barra">
+          <div class="texto"></div>
+        </div>
+      </div>
+      
+      <div class="total" id="btnTotal">
+        
+        <!-- Barra de progreso -->
+        
+        Total inventario <span id="totalValue"></span>
+      </div>
+    </header>
+
+    
+    <!-- Agrega un campo de entrada para buscar un producto -->
+
+    <!-- Formulario para introducir un nuevo producto / editarlo -->
+    <div class="control">
+    <form id="product-form-events" class="product-form-styles">
+
+      <label for="product-name">Nombre: </label>
+      <input type="text" id="product-name" required />
+      <label for="product-quantity">Cantidad: </label>
+    
+      
+      <input type="number" id="product-quantity" required />
+      <label for="product-price">Precio: </label>
+      <input type="number" step="0.01" id="product-price" required />
+      <div class="divi">
+        <button id="submit-button" type="submit">Agregar Producto</button>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+    </form>
+</div>
+    
+    <div class="dividi">
+      <input
+        type="text"
+        id="search-product"
+        placeholder="Buscar producto por nombre"
+      />
+      <!-- Agrega un botón para realizar la búsqueda -->
+      <button id="search-button">Buscar Producto</button>
+    </div>
+
+    <table id="inventory-table-events" class="inventory-table-styles">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="body-table"></tbody>
+    </table>
+    <div class="dividi">
+      <button id="elevator" class="elevator">Subir</button>
+    </div>
+
+    <script src="scripts/main.js" type="module"></script>
+
+    <audio class="escondido" controls autoplay>
+      <source src="assets/music/super-mario-bros.mp3" type="audio/mp3" />
+    </audio>
+    <footer><p>&copy;Derechos de autor de RetroGames.bit</p></footer>
+  </body>
+</html>
